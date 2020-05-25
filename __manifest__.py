@@ -8,7 +8,7 @@
     'category': 'Tools',
     'author': "Gallay David",
     'depends': [
-        'base',
+        'web',
     ],
     'version': '13.0',
     'auto_install': False,
