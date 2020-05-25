@@ -10,9 +10,9 @@ _logger = logging.getLogger(__name__)
 class Home(web.Home):
 
     @route('/become_specific_user/become/<int:user_id>', type='http', auth='user', sitemap=False)
-    def _become_user(self, user_id):
+    def _become_user(self, user_id, **kwargs):
         uid = request.env.user.id
-        if request.env.user._is_system() and request.env['res.partner'].browse(user_id).exists():
+        if request.env.user._is_system() and request.env['res.users'].browse(user_id).exists():
             uid = request.session.uid = user_id
             request.env['res.users']._invalidate_session_cache()
             request.session.session_token = security.compute_session_token(request.session, request.env)

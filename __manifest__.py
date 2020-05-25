@@ -8,9 +8,9 @@
     'category': 'Tools',
     'author': "Gallay David",
     'depends': [
-        'base',
+        'web',
     ],
-    'version': '13.0',
+    'version': '12.0',
     'auto_install': False,
     'website': '',
     'license': 'AGPL-3',
